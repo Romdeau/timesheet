@@ -5,5 +5,8 @@
 # but you can also edit it by hand.
 
 meteor-platform
-autopublish
 insecure
+sacha:spin
+iron:router
+twbs:bootstrap
+underscore
