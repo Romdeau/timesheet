@@ -1,5 +1,12 @@
 <template name="jobsList">
   <div class="jobs page">
+    <div class="job">
+      <div class="job-content">
+        {{#if currentUser}}<a href="{{pathFor 'jobSubmit'}}" class="btn btn-primary">Submit Job</a>{{/if}}
+        <a href="#" class="btn btn-default">Order by Number</a>
+        <a href="#" class="btn btn-default">Order by Name</a>
+      </div>
+    </div>
     {{#each jobs}}
       {{> jobItem}}
     {{/each}}

@@ -1,7 +1,11 @@
 <template name="jobItem">
   <div class="job">
     <div class="job-content">
-      <h3>{{jobNumber}}: Job {{jobName}}</h3>
+      <h3><a href="{{pathFor 'jobPage'}}">{{jobName}}</a><span>&nbsp; {{jobNumber}}</span></h3>
+      <p>
+        Time {{timeCoding}} - {{jobType}} <span>submitted by {{author}}</span>
+        {{#if ownJob}}<a href="{{pathFor 'jobEdit'}}">Edit</a>{{/if}}
+      </p>
     </div>
   </div>
 </template>

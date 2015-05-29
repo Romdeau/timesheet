@@ -1,5 +1,5 @@
 Template.jobsList.helpers({
   jobs: function() {
-    return Jobs.find();
+    return Jobs.find({}, {sort: {jobNumber: 1}});
   }
 });

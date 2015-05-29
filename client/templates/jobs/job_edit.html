@@ -1,0 +1,21 @@
+<template name="jobEdit">
+  <form class="main form page">
+    <div class="form-group {{errorClass 'jobNumber'}}">
+      <label class="control-label" for="jobNumber">Job Number</label>
+      <div class="controls">
+          <input name="jobNumber" id="jobNumber" type="text" value="{{jobNumber}}" placeholder="Your URL" class="form-control"/>
+          <span class="help-block">{{errorMessage 'jobNumber'}}</span>
+      </div>
+    </div>
+    <div class="form-group {{errorClass 'jobName'}}">
+      <label class="control-label" for="jobName">Job Name</label>
+      <div class="controls">
+          <input name="jobName" id="jobName" type="text" value="{{jobName}}" placeholder="Name your post" class="form-control"/>
+          <span class="help-block">{{errorMessage 'jobName'}}</span>
+      </div>
+    </div>
+    <input type="submit" value="Submit" class="btn btn-primary submit"/>
+    <hr/>
+    <a class="btn btn-danger delete" href="#">Delete job</a>
+  </form>
+</template>
